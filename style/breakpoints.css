@@ -19,6 +19,10 @@
     .left .btn{
         display: none;
     }
+
+    .customize-theme .card {
+        width: 92vw;
+    }
 }
 
 @media (max-width: 992px) {
