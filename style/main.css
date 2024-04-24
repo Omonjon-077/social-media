@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 :root {
-    --color-white: hsl(252, 30%, 100%);
-    --color-light: hsl(252, 30%, 95%);
-    --color-gray: hsl(252, 15%, 65%);
-    --color-primary: hsl(252, 75%, 60%);
+    --primary-color-hue: 252;
+    --dark-color-lightness: 17%;
+    --light-color-lightness: 95%;
+    --white-color-lightness: 100%;
+
+    --color-white: hsl(252, 30%, var(--white-color-lightness));
+    --color-light: hsl(252, 30%, var(--light-color-lightness));
+    --color-gray: hsl(var(--primary-color-hue), 15%, 65%);
+    --color-primary: hsl(var(--primary-color-hue), 75%, 60%);
     --color-secondary: hsl(252, 100%, 90%);
     --color-success: hsl(120, 95%, 65%);
     --color-danger: hsl(0, 95%, 65%);
-    --color-dark: hsl(252, 30%, 17%);
+    --color-dark: hsl(252, 30%, var(--dark-color-lightness));
     --color-black: hsl(252, 30%, 10%);
 
     --border-radius: 2rem;
@@ -468,9 +473,15 @@ main .container .right {
     border-bottom: 4px solid var(--color-light);
     padding: 0 0 .5rem 0;
     font-size: .85rem;
+    cursor: pointer;
+    transition: .3s border-bottom-color ease-in;
 }
 
-.right .messages .category .active {
+.right .messages .category h6.active {
+    border-color: var(--color-dark);
+}
+
+.right .messages .category h6:hover {
     border-color: var(--color-dark);
 }
 
@@ -661,6 +672,7 @@ main .container .right {
     font-weight: bold;
     border-radius: .4rem;
     cursor: pointer;
+    border: 2px solid var(--color-white);
 }
 
 .customize-theme .choose-bg > div.active {
@@ -682,10 +694,25 @@ main .container .right {
     color: white;
 }
 
-.customize-theme .choose-bg > div span {
+.customize-theme .choose-bg > div p {
     width: 2rem;
     height: 2rem;
     border: 2px solid var(--color-gray);
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-right: 1rem;
+    background-color: transparent;
+}
+
+.customize-theme .choose-bg > div.active p {
+    border: 2px solid var(--color-primary);
+}
+
+.customize-theme .choose-bg > div.active p span {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--color-primary);
 }
