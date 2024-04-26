@@ -18,6 +18,13 @@ const Bg1 = document.querySelector('.bg-1'),
     Bg2 = document.querySelector('.bg-2'),
     Bg3 = document.querySelector('.bg-3');
 
+const chatType = document.querySelectorAll('.category h6'),
+    chatPrimary = document.querySelector('.chat-primary'),
+    chatGeneral = document.querySelector('.chat-general'),
+    chatRequest = document.querySelector('.chat-request'),
+    chatRequestCount = document.querySelector('.request-count'),
+    chatRequests = document.querySelectorAll('.chat-request .message');
+
 /*================= SIDEBAR  =================*/
 // Remove active class from all menu items
 const
@@ -373,3 +380,39 @@ if (themeBg) {
     });
 }
 activeLastThemeBg();
+
+/*================= BACKROUND CHANGE  =================*/
+const removeActiveChat = () => {
+    chatType.forEach(chat => {
+        chat.classList.remove('active');
+    });
+}
+
+const requestCount = () => {
+    for (let i = 0; i < chatRequests.length; i++) {
+        let lengthCount = i;
+        chatRequestCount.innerHTML = lengthCount + 1;
+    }
+};
+
+chatType.forEach(chat => {
+    chat.addEventListener('click', (e) => {
+        removeActiveChat();
+        chat.classList.add('active');
+        if (chat.classList.contains('chat-type-primary')) {
+            chatPrimary.style.display = 'initial';
+            chatGeneral.style.display = 'none';
+            chatRequest.style.display = 'none';
+        } else if (chat.classList.contains('chat-type-general')) {
+            chatGeneral.style.display = 'initial';
+            chatPrimary.style.display = 'none';
+            chatRequest.style.display = 'none';
+        } else {
+            chatRequest.style.display = 'initial';
+            chatPrimary.style.display = 'none';
+            chatGeneral.style.display = 'none';
+        }
+    });
+});
+
+requestCount();

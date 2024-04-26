@@ -490,61 +490,172 @@
 
                     <!--======================== MESSAGE CATEGORY  ========================-->
                     <div class="category">
-                        <h6 class="active">Primary</h6>
-                        <h6>General</h6>
-                        <h6 class="message-requests">Requests(7)</h6>
+                        <h6 class="chat-type-primary active">Primary</h6>
+                        <h6 class="chat-type-general">General</h6>
+                        <h6 class="chat-type-requests">Requests(<span class="request-count"></span>)</h6>
                     </div>
 
-                    <!--======================== MESSAGES 1 ========================-->
-                    <div class="message">
-                        <div class="profile-photo">
-                            <img src="img/profile-17.jpg" alt="">
+                    <div class="chat-primary">
+                        <!--======================== MESSAGES 1 ========================-->
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="img/profile-17.jpg" alt="">
+                            </div>
+                            <div class="message-body">
+                                <h5>Edem Quist</h5>
+                                <p class="text-muted">Just woke up bruh</p>
+                            </div>
                         </div>
-                        <div class="message-body">
-                            <h5>Edem Quist</h5>
-                            <p class="text-muted">Just woke up bruh</p>
+                        <!--======================== MESSAGES 2 ========================-->
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="img/profile-12.jpg" alt="">
+                                <div class="active"></div>
+                            </div>
+                            <div class="message-body">
+                                <h5>Eva Tompson</h5>
+                                <p class="text-bold">Okay sister</p>
+                            </div>
+                        </div>
+                        <!--======================== MESSAGES 3 ========================-->
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="img/profile-13.jpg" alt="">
+                            </div>
+                            <div class="message-body">
+                                <h5>Rich Bruh</h5>
+                                <p class="text-bold">2 new messages</p>
+                            </div>
+                        </div>
+                        <!--======================== MESSAGES 4 ========================-->
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="img/profile-15.jpg" alt="">
+                            </div>
+                            <div class="message-body">
+                                <h5>Richard Stuard</h5>
+                                <p class="text-muted">Just woke up bruh</p>
+                            </div>
+                        </div>
+                        <!--======================== MESSAGES 5 ========================-->
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="img/profile-18.jpg" alt="">
+                                <div class="active"></div>
+                            </div>
+                            <div class="message-body">
+                                <h5>Karlo Eliza</h5>
+                                <p class="text-bold">Birthday Tomorrow!</p>
+                            </div>
+                        </div>
+                        <!--======================== MESSAGES 5 ========================-->
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="img/profile-19.jpg" alt="">
+                                <div class="active"></div>
+                            </div>
+                            <div class="message-body">
+                                <h5>Pablo Escobar</h5>
+                                <p class="text-bold">Bro how are you ?</p>
+                            </div>
+                        </div>
+                        <!--======================== MESSAGES 5 ========================-->
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="img/profile-20.jpg" alt="">
+                            </div>
+                            <div class="message-body">
+                                <h5>Camila Cabello</h5>
+                                <p class="text-bold">Trust me</p>
+                            </div>
                         </div>
                     </div>
-                    <!--======================== MESSAGES 2 ========================-->
-                    <div class="message">
-                        <div class="profile-photo">
-                            <img src="img/profile-12.jpg" alt="">
-                            <div class="active"></div>
+
+                    <div class="chat-general" style="display: none">
+                        <!--======================== MESSAGES 1 ========================-->
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="img/profile-17.jpg" alt="">
+                            </div>
+                            <div class="message-body">
+                                <h5>Edem Quist</h5>
+                                <p class="text-muted">Just woke up bruh</p>
+                            </div>
                         </div>
-                        <div class="message-body">
-                            <h5>Eva Tompson</h5>
-                            <p class="text-bold">Okay sister</p>
+                        <!--======================== MESSAGES 2 ========================-->
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="img/profile-12.jpg" alt="">
+                                <div class="active"></div>
+                            </div>
+                            <div class="message-body">
+                                <h5>Eva Tompson</h5>
+                                <p class="text-bold">Okay sister</p>
+                            </div>
+                        </div>
+                        <!--======================== MESSAGES 3 ========================-->
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="img/profile-13.jpg" alt="">
+                            </div>
+                            <div class="message-body">
+                                <h5>Rich Bruh</h5>
+                                <p class="text-bold">2 new messages</p>
+                            </div>
+                        </div>
+                        <!--======================== MESSAGES 4 ========================-->
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="img/profile-15.jpg" alt="">
+                            </div>
+                            <div class="message-body">
+                                <h5>Richard Stuard</h5>
+                                <p class="text-muted">Just woke up bruh</p>
+                            </div>
+                        </div>
+                        <!--======================== MESSAGES 5 ========================-->
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="img/profile-18.jpg" alt="">
+                                <div class="active"></div>
+                            </div>
+                            <div class="message-body">
+                                <h5>Karlo Eliza</h5>
+                                <p class="text-bold">Birthday Tomorrow!</p>
+                            </div>
                         </div>
                     </div>
-                    <!--======================== MESSAGES 3 ========================-->
-                    <div class="message">
-                        <div class="profile-photo">
-                            <img src="img/profile-13.jpg" alt="">
+
+                    <div class="chat-request" style="display: none">
+                        <!--======================== REQUES 1 ========================-->
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="img/profile-11.jpg" alt="">
+                            </div>
+                            <div class="message-body">
+                                <h5>Tiago Silva</h5>
+                                <p class="text-bold">I want you</p>
+                            </div>
                         </div>
-                        <div class="message-body">
-                            <h5>Rich Bruh</h5>
-                            <p class="text-bold">2 new messages</p>
+                        <!--======================== REQUES 2 ========================-->
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="img/profile-7.jpg" alt="">
+                            </div>
+                            <div class="message-body">
+                                <h5>Rihanna Edison</h5>
+                                <p class="text-bold">You belive me ?</p>
+                            </div>
                         </div>
-                    </div>
-                    <!--======================== MESSAGES 4 ========================-->
-                    <div class="message">
-                        <div class="profile-photo">
-                            <img src="img/profile-15.jpg" alt="">
-                        </div>
-                        <div class="message-body">
-                            <h5>Richard Stuard</h5>
-                            <p class="text-muted">Just woke up bruh</p>
-                        </div>
-                    </div>
-                    <!--======================== MESSAGES 5 ========================-->
-                    <div class="message">
-                        <div class="profile-photo">
-                            <img src="img/profile-18.jpg" alt="">
-                            <div class="active"></div>
-                        </div>
-                        <div class="message-body">
-                            <h5>Karlo Eliza</h5>
-                            <p class="text-bold">Birthday Tomorrow!</p>
+                        <!--======================== REQUES 3 ========================-->
+                        <div class="message">
+                            <div class="profile-photo">
+                                <img src="img/profile-2.jpg" alt="">
+                            </div>
+                            <div class="message-body">
+                                <h5>Rich Bruh</h5>
+                                <p class="text-bold">5 new messages</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -696,6 +807,6 @@
     </div>
 </div>
 
-<script src="./scripts/main.js?v=0.2"></script>
+<script src="./scripts/main.js?v=0.3"></script>
 </body>
 </html>
