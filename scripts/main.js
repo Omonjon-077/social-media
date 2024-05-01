@@ -25,6 +25,9 @@ const chatType = document.querySelectorAll('.category h6'),
     chatRequestCount = document.querySelector('.request-count'),
     chatRequests = document.querySelectorAll('.chat-request .message');
 
+const searchCreators = document.querySelector('#search-creators'),
+    feedCreators = document.querySelectorAll('.feed');
+
 /*================= SIDEBAR  =================*/
 // Remove active class from all menu items
 const
@@ -51,6 +54,22 @@ activeNotificationCount = localStorage.getItem('activeNotificationCount') ? loca
 if (activeNotificationCount === 'empty') {
     document.querySelector('#notifications .notification-count').style.display = 'none';
 }
+
+/*================= SEARCH CREATORS  =================*/
+const searchCreator = () => {
+    const val = searchCreators.value.toLowerCase();
+    feedCreators.forEach(user => {
+        name = user.querySelector('h3').textContent.toLowerCase();
+        if (name.indexOf(val) != -1) {
+            user.style.display = 'block';
+        } else {
+            user.style.display = 'none';
+        }
+    })
+};
+
+searchCreators.addEventListener('keyup', searchCreator);
+
 /*================= MESSAGES  =================*/
 // search chat
 const searchMessage = () => {
@@ -63,9 +82,9 @@ const searchMessage = () => {
             user.style.display = 'none';
         }
     })
-}
+};
 
-messageSearch.addEventListener('keyup', searchMessage)
+messageSearch.addEventListener('keyup', searchMessage);
 
 // hightlight messages card when messages menu item is clicked
 messagesNotification.addEventListener('click', () => {

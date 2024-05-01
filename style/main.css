@@ -385,6 +385,12 @@ main .container .left .profile {
     justify-content: space-between;
 }
 
+.middle .feed .head .edit i,
+.middle .feed .interaction-buttons span,
+.middle .feed .bookmark span{
+    cursor: pointer;
+}
+
 .middle .feed .user {
     display: flex;
     gap: 1rem;
@@ -450,6 +456,10 @@ main .container .right {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1rem;
+}
+
+.right .messages .heading i{
+    cursor: pointer;
 }
 
 .right .messages i {
