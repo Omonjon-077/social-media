@@ -387,7 +387,7 @@ main .container .left .profile {
 
 .middle .feed .head .edit i,
 .middle .feed .interaction-buttons span,
-.middle .feed .bookmark span{
+.middle .feed .bookmark span {
     cursor: pointer;
 }
 
@@ -458,7 +458,7 @@ main .container .right {
     margin-bottom: 1rem;
 }
 
-.right .messages .heading i{
+.right .messages .heading i {
     cursor: pointer;
 }
 
